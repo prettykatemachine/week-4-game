@@ -3,19 +3,33 @@
     margin-top: 10px;
     border-style: double;
     background: radial-gradient(circle at top right, palevioletred,lightsalmon,lightyellow,lightgreen,lightskyblue,indigo,violet); 
-    
+    font-family: 'Lovers Quarrel', cursive;
+}
+
+h1 { 
+    font-size: 118px;
 }
 .panel-heading{
     background: #FEAC5E;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); 
+    font-family: Arial, Helvetica, sans-serif;
 }    
+
+.instructions{
+background-color: peachpuff;
+}
 
 #panelStyle{
 	float:left;
     margin: 10px 20px 10px 0px;
    
 }
+
+.stats {
+    background-color: paleturquoise;
+
+}
+
 
 body {
     background-image: url("../images/spiration-light.png")
@@ -25,3 +39,4 @@ img {
     height: 200px;
     width: 200px;
 }
+

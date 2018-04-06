@@ -1,113 +1,113 @@
-$(document).ready(function(){
-    var Random = Math.floor(Math.random()*101+33);
+$(document).ready(function () {
+    var Random = Math.floor(Math.random() * 101 + 33);
     console.log(Random);
     $('#number').text(Random);
 
 
-var goalNumber = [];
-var total= 0;	
-var wins= 0;
-var losses = 0;
-$("#victories").text(wins);
-$("#fails").text(losses);		
-
-
-
-function fourRandomNumbers(){
-for (var i = 0; i < 4; i++) {
-    var num = Math.floor(Math.random()*11+1);
-    goalNumber.push(num);
-}
-console.log(goalNumber);
-}
-
-fourRandomNumbers();
-
-
-function reset(){
-    Random = Math.floor(Math.random()*101+33);
-    console.log(Random);
-    $('#number').text(Random);
-    goalNumber = [];
-    fourRandomNumbers();
-    total= 0;
-    $('#Combined').text(total);
-    } 
-
-function winner(){
-alert("Winner!!!");
-    wins++;	
+    var goalNumber = [];
+    var total = 0;
+    var wins = 0;
+    var losses = 0;
     $("#victories").text(wins);
-    reset();
-}
-
-
-function loser(){
-alert ("Loser!!!");
-    losses++;
-    $('#fails').text(losses);
-    reset();
-}
+    $("#fails").text(losses);
 
 
 
+    function fourRandomNumbers() {
+        for (var i = 0; i < 4; i++) {
+            var num = Math.floor(Math.random() * 11 + 1);
+            goalNumber.push(num);
+        }
+        console.log(goalNumber);
+    }
 
-    $('#one').on ('click', function(){
+    fourRandomNumbers();
+
+
+    function reset() {
+        Random = Math.floor(Math.random() * 101 + 33);
+        console.log(Random);
+        $('#number').text(Random);
+        goalNumber = [];
+        fourRandomNumbers();
+        total = 0;
+        $('#Combined').text(total);
+    }
+
+    function winner() {
+        alert("Winner!!!");
+        wins++;
+        $("#victories").text(wins);
+        reset();
+    }
+
+
+    function loser() {
+        alert("Loser!!!");
+        losses++;
+        $('#fails').text(losses);
+        reset();
+    }
+
+
+
+
+    $('#one').on('click', function () {
         total = total + goalNumber[0];
         console.log("New total= " + total);
-        $('#Combined').text(total);	
+        $('#Combined').text(total);
 
-                  
-                if (total == Random){
-                    winner();
-                }
-                else if ( total > Random){
-                    loser();
-                }		
+
+        if (total == Random) {
+            winner();
+        }
+        else if (total > Random) {
+            loser();
+        }
     });
 
-    $('#two').on ('click', function(){
+    $('#two').on('click', function () {
         total = total + goalNumber[1];
         console.log("New total= " + total);
-        $('#Combined').text(total);	
+        $('#Combined').text(total);
 
-                if (total == Random){
-                winner();
-                }
-                else if ( total > Random){
-                    loser();
-                }	
+        if (total == Random) {
+            winner();
+        }
+        else if (total > Random) {
+            loser();
+        }
     });
 
-    $('#three').on ('click', function(){
+    $('#three').on('click', function () {
         total = total + goalNumber[2];
         console.log("New total= " + total);
         $('#Combined').text(total);
 
 
-                    if (total == Random){
-                    winner();
-                }
-                else if ( total > Random){
-                    loser();
-                }	
-    });	
+        if (total == Random) {
+            winner();
+        }
+        else if (total > Random) {
+            loser();
+        }
+    });
 
-    $('#four').on ('click', function(){
+    $('#four').on('click', function () {
         total = total + goalNumber[3];
         console.log("New total= " + total);
-        $('#Combined').text(total);	
+        $('#Combined').text(total);
 
-            
-                    if (total == Random){
-                    winner();
-                }
-                else if ( total > Random){
-                    loser();
-                }
-    });  	
 
-});	
+        if (total == Random) {
+            winner();
+        }
+        else if (total > Random) {
+            loser();
+        }
+    });
+
+});
 
 
 //var randomNumber = 5;
